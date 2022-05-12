@@ -1,0 +1,26 @@
+debug: true
+spring:
+  datasource:
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    password: 123
+    url: jdbc:sqlserver://localhost;databaseName=springbootprueba
+    username: develop
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        
+        format_sql: true
+    show-sql: true
+server.port : 8080
+
+logging:
+  file.name: logs/app.log
+  pattern:
+    console: "%d [%t] %-5level %logger{36} - %msg%n"
+    file: "%d [%t] %-5level %logger{36} - %msg%n"
+  level:
+    com.m2evorah: DEBUG
+    org.springframework: DEBUG
+    org.hibernate: DEBUG
